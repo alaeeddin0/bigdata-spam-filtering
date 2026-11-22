@@ -1,0 +1,30 @@
+# Données brutes et lakehouse local
+data/*
+!data/.gitkeep
+*.csv
+*.parquet
+*.json
+
+# Dépendances JAR lourdes (à télécharger via script ou volume Docker)
+jars/*.jar
+
+# Environnements Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Logs et fichiers temporaires Airflow / Spark
+airflow/logs/*
+!airflow/logs/.gitkeep
+*.log
+derby.log
+metastore_db/
+spark-warehouse/
+
+# IDE & Système
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
